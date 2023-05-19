@@ -1,0 +1,13 @@
+.comments{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &__list{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2vh;
+    }
+}

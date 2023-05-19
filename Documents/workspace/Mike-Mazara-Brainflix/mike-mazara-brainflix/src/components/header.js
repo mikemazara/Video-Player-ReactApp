@@ -4,7 +4,7 @@ function Header() {
     return (
         <header className="header">
             <div className="header__logo">
-                <img className="header__logo-image" src="./assets/logo/Logo-brainflix.svg" alt="Brainflix logo" />
+                <img className="header__logo-image" src="" alt="Brainflix logo" />
             </div>
             <div className="header__search">
                 <input className="header__search-input" type="text" placeholder="Search" />
