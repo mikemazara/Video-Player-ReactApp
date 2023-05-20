@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+@mixin font-1 {
+        font-family: 'Avenir Next1', Arial, Helvetica, sans-serif;
+        src: url(../../assets/font/AvenirNextLTPro-Regular.otf);
+        font-weight: normal;
+        font-style: normal;
+    
+}
+
+@mixin font-2 {
+        font-family: 'Avenir Next2', Arial, Helvetica, sans-serif;
+        src: url(../../assets/font/AvenirNextLTPro-Bold.otf);
+        font-weight: bold;
+        font-style: normal;
+}
+

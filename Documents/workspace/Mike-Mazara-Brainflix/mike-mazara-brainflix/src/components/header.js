@@ -1,18 +1,25 @@
-import '../styles/header.scss'
+import './header.scss'
+import logo from '../assets/logo/BrainFlix-logo.svg'
+import avatar from '../assets/images/mohan-muruge.jpg'
+import searchIcon from '../assets/icons/search.svg'
+import uploadIcon from '../assets/icons/upload.svg'
 
 function Header() {
     return (
         <header className="header">
             <div className="header__logo">
-                <img className="header__logo-image" src="" alt="Brainflix logo" />
+                <img className="header__logo-image" src={logo} alt="Brainflix logo" />
             </div>
             <div className="header__search">
-                <input className="header__search-input" type="text" placeholder="Search" />
-                <button className="header__search-button" type="submit">Search</button>
-                <img className="header__user-image" src="/assets/images/Mohan-muruge.jpg" alt="User avatar" />
+                <img className="header__search-icon" src={searchIcon} alt="search icon"></img>
+                <input className="header__search-bar" type="text" placeholder="Search" />
+                <div className='header__avatar-container'>
+                    <img className="header__avatar" src={avatar} alt="User avatar" />
+                </div>
             </div>
-            <div className="header__user">
-                <button className="header__user-upload" type="button">+ UPLOAD</button>
+            <div className="header__button-container">
+            <img className="header__button-icon"src={uploadIcon} alt="upload arrow"></img>
+                <button className="header__button" type="button">UPLOAD</button>
             </div>
         </header>
     )

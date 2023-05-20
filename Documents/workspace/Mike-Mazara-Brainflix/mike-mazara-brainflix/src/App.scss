@@ -1,5 +1,13 @@
+@use './styles/partials/mixins' as *;
+
+
+
 .App {
+  @include font-1;
   text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .App-logo {

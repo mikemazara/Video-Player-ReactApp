@@ -1,4 +1,4 @@
-import '../styles/next-video.scss'
+import './next-video.scss'
 
 
 const NextVideo = ({ videos, setThisVideoId }) => {

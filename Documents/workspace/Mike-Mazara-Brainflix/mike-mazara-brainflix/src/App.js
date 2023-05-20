@@ -2,22 +2,29 @@ import './App.scss';
 import {useState} from 'react';
 import Header from './components/header.js';
 import Hero from './components/hero';
+import videosLite from './assets/data/videos.json';
 import videos from './assets/data/video-details.json';
 import Comments from './components/comments';
-
 import NextVideo from './components/next-video';
 
-// const videoDetails = videos.map(obj => {
-  //   const { id, title, channel, image, description, views, likes, duration, video, timestamp, comments } = obj;
-  //   return { id, title, channel, image, description, views, likes, duration, video, timestamp, comments };
-  // });
-  
-  function App() {
-    // create a function to deconstruct the video details in all the video objects in the videos array
-    const [thisVideoId, setThisVideoId] = useState(videos[0].id);
+ 
+// made functions to fetch data from json files in order to mimic an api call
+function fetchMainVideoFile(id)  {
+    return  videos.filter(obj => obj.id == id)[0];
     
-    const thisVideo = videos.filter(obj => obj.id === thisVideoId)[0];
-    const allOtherVideos = videos.filter(obj => obj.id !== thisVideoId);
+    
+  }  
+
+  function fetchRelatedVideos(id) {
+    const allOtherVideos = videosLite.filter(obj => obj.id != id);
+    return allOtherVideos;
+  }
+
+  function App() {
+      // hard coded the first id to be the first video in the json file for now
+    const [thisVideoId, setThisVideoId] = useState('84e96018-4022-434e-80bf-000ce4cd12b8'); 
+    const thisVideo = fetchMainVideoFile(thisVideoId);
+    const allOtherVideos = fetchRelatedVideos(thisVideoId);
     
     return (
     <div className="App">
