@@ -15,6 +15,10 @@
         color: $primary-black;
         font-weight: 700;
         padding-left: 6vw;
+        @include tablet{
+            width: 100%;
+            font-size: 1.125rem;
+        }
     }
     &__form{
         width: 87%;
@@ -26,6 +30,12 @@
         border-bottom: 2px solid $secondary-grey;
         padding-bottom: 2rem;
         margin-top: 2rem;
+        @include tablet{
+            margin-right: 0vw;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
     }
 
     &__form-avatar-container{
@@ -34,10 +44,19 @@
         border: none;
         border-radius: 50%;
         overflow: hidden;
+        @include tablet{
+            height: 3.25rem;
+            width: 3.25rem;
+            margin-top: 2rem;
+        }
     }
     &__form-avatar{
         height: 5.25rem;
         width: 6.75rem;
+        @include tablet{
+            height: 3.75rem;
+            width: 4.75rem;
+        }
     }
 
     &__input{
@@ -48,6 +67,14 @@
         width: 100%;
         height: 100%;
         margin-left: 4vw;
+        @include tablet{
+            flex-wrap: wrap;
+            width: 77vw;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            
+        }
     }
 
     &__input-text{
@@ -61,6 +88,14 @@
         font-size: 1.625rem;
         padding-left: 2rem;
         padding-top: 2rem;
+        @include tablet{
+            width: 60%;
+            height: 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid $secondary-grey;
+            padding-top: 2%;
+        }
 
         &::placeholder{
             color: $primary-black;;
@@ -78,6 +113,12 @@
         font-size: 1.5rem;
         color: $primary-grey;
         margin-bottom: 1rem;
+        @include tablet{
+            font-size: 1rem;
+            display: flex;
+            width: 80%;
+            margin-bottom: 0;
+        }
     }
 
     &__input-button{
@@ -92,6 +133,16 @@
         height: 5rem;
         margin-bottom: 1rem;
         cursor: pointer;
+        @include tablet{
+            width: 29%;
+            height: 3.5rem;
+            font-size: .875rem;
+            border-radius: 5px;
+            border: 1px solid $secondary-grey;
+            padding-top: 1%;
+            margin-bottom: 0;
+            margin-left: 1vw;
+        }
         &:hover{
             background-color: $secondary-blue;
         }
@@ -102,6 +153,11 @@
         left: 2rem;
         top: 3.5rem;
         width: 2rem;
+        @include tablet{
+            width: 1.5rem;
+            top: 1rem;
+            left: 3rem;
+        }
     }
 
     &__list{
@@ -119,6 +175,11 @@
             overflow: hidden;
             margin-bottom: 1rem;
             background-color: $secondary-grey;
+            @include tablet{
+                height: 3.25rem;
+                width: 3.25rem;
+                margin-bottom: 0;
+            }
         }
         &-avatar{
             display: none;
@@ -137,6 +198,10 @@
         width: 66vw;
         text-align: left;
         margin-left: 8vw;
+        @include tablet{
+            width: 77vw;
+            margin-left: 3vw;
+        }
     }
 
     &__top{
@@ -149,6 +214,9 @@
         margin-top: 0;
         margin-bottom: 1rem;
         font-size: 1.5rem;
+        @include tablet{
+            font-size: 1rem;
+        }
 
     }
 
@@ -157,6 +225,9 @@
         margin-bottom: 1rem;
         font-size: 1.5rem;
         color: $primary-grey;
+        @include tablet{
+            font-size: 1rem;
+        }
     }
 
     &__paragraph{
@@ -164,6 +235,9 @@
         margin-bottom: 1rem;
         width: 100%;
         font-size: 1.5rem;
+        @include tablet{
+            font-size: 1rem;
+        }
     }
 
 }
