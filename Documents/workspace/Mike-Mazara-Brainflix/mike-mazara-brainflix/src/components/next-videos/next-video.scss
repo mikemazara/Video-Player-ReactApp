@@ -2,6 +2,11 @@
 @use '../../styles/partials/mixins' as *;
 
 .next-video{
+    @include tablet{
+        width: 50vw;
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
 
   @include flex-container;
     flex-direction: column;
@@ -14,11 +19,21 @@
         color: $primary-grey;
         margin-top: 1rem;
         margin-bottom:3rem;
+        @include tablet{
+            font-size: 1rem;
+            margin-top: 1rem;
+            margin-bottom:2rem;
+        }
     }
     &__video{
         @include flex-container;
         width: 100%;
         margin-bottom: 3rem;
+        @include tablet{
+            width: 100%;
+            margin-bottom: 2rem;
+            flex-wrap: nowrap;
+        }
         &:hover{
             cursor: pointer;
             border-bottom: 2px solid $secondary-grey;
@@ -31,27 +46,52 @@
         border: none;
         overflow: hidden;
         justify-content: center;
+        @include tablet{
+            width: 17vw;
+            height: 10vw;
+            margin-bottom: 1rem;
+            margin-right: 3vw;
+        }
     }
     &__img{
         width: 33vw;
         height: 24vw;
         position: relative;
         bottom: 1rem;
+        @include tablet{
+            width: 18vw;
+            height: 13vw;
+            position: relative;
+            bottom: 1rem;
+        }
     }
     &__details{
         @include flex-container;
         flex-direction: column;
         width: 50vw;
         margin-left: 5vw;
+        @include tablet{
+            width: 60%;
+            margin-left: 0vw;
+        }
     }
     &__title{
         font-size: 1.75rem;
         margin-top: 0;
         margin-bottom: .5rem;
+        @include tablet{
+            font-size: 1.25rem;
+            margin-bottom: .25rem;
+        }
     }
     &__channel{
         font-size: 1.75rem;
         margin-bottom: 1rem;
         margin-top: 1.25rem;
+        @include tablet{
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            margin-top: 1rem;
+        }
     }
 }
