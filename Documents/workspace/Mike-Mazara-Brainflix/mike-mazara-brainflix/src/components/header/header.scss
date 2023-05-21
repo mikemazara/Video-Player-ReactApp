@@ -16,6 +16,11 @@
         padding-left: 6vw;
         width: 94vw;
     }
+    @include desktop{
+        height: 6rem;
+        padding-inline: 10vw;
+        width: 80vw;
+    }
     &__logo{
         text-align: center;
         width: 40vw;
@@ -26,11 +31,21 @@
             height: 100%;
             margin-top: 0rem;
         }
+        @include desktop{
+            width: 10vw;
+            height: 100%;
+            margin-top: 0rem;
+            margin-right: 17vw;
+        }
         &-image{
             width: 40vw;
             height: 100%;
             @include tablet{
                 width: 17vw;
+                height: 100%;
+            }
+            @include desktop{
+                width: 10vw;
                 height: 100%;
             }
         }
@@ -48,6 +63,13 @@
             margin-top: 1rem;
             padding-left: 0vw;
         }
+        @include desktop{
+            width: 22vw;
+            height: 100%;
+            margin-left: 10vw;
+            margin-top: 1rem;
+            padding-left: 0vw;
+        }
     }
 
     &__search-icon{
@@ -58,6 +80,10 @@
         @include tablet{
             width: 1.5rem;
             left: 3.5vw;
+        }
+        @include desktop{
+            width: 1.5rem;
+            left: 2.5vw;
         }
     }
 
@@ -77,6 +103,12 @@
             padding-left: 15%;
             border-radius: 5px;
             border: 1px solid $secondary-grey;
+        }
+        @include desktop{
+            width: 18vw;
+            height: 3rem;
+            font-size: 1rem;
+            padding-left: 15%;
         }
         &::placeholder{
             color: $primary-black;;
@@ -103,6 +135,9 @@
             right: 4vw;
             top: 1.25rem;
         }
+        @include desktop{
+            right: 10vw;
+        }
     }
     &__avatar{
         height: 5.25rem;
@@ -126,6 +161,10 @@
             margin-bottom: 0rem;
             margin-left: 0vw;
         }
+        @include desktop{
+            width: 15vw;
+            height: 6rem;
+        }
 
     }
     &__button{
@@ -144,7 +183,7 @@
         margin-top: 0;
         @include tablet{
             width: 100%;
-            height: 3rem;
+            height: 3.25rem;
             font-size: 1rem;
             border-radius: 5px;
             font-size: .875rem;
