@@ -1,6 +1,6 @@
 import "./comments.scss";
-import avatar from "../assets/images/mohan-muruge.jpg";
-import commentIcon from "../assets/icons/add_comment.svg";
+import avatar from "../../assets/images/mohan-muruge.jpg";
+import commentIcon from "../../assets/icons/add_comment.svg";
 
 function CommentItem({ comment: { id, name, timestamp, comment } }) {
   let date = new Date(timestamp);
