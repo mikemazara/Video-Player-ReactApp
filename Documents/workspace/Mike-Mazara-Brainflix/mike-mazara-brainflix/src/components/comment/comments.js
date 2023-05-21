@@ -55,8 +55,18 @@ function CommentsContainner({ comments }) {
             rows="10"
             placeholder="Add a new comment"
           ></textarea>
-          <img className="comments__input-icon" src={commentIcon}></img>
-          <button className="comments__input-button" type="submit">
+          <img
+            className="comments__input-icon"
+            src={commentIcon}
+            alt="commet icon"
+          ></img>
+          <button
+            className="comments__input-button"
+            type="submit"
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+          >
             COMMENT
           </button>
         </form>

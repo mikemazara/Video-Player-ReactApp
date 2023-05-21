@@ -1,19 +1,19 @@
 import "./App.scss";
 import { useState } from "react";
 import Header from "./components/header/header.js";
-import Hero from "./components/hero/hero";
+import Hero from "./components/hero/hero.js";
 import videosLite from "./assets/data/videos.json";
 import videos from "./assets/data/video-details.json";
-import Comments from "./components/comments/comments";
+import Comments from "./components/comment/comments";
 import NextVideo from "./components/next-videos/next-video";
 
 // made functions to fetch data from json files in order to mimic an api call
 function fetchMainVideoFile(id) {
-  return videos.filter((obj) => obj.id == id)[0];
+  return videos.filter((obj) => obj.id === id)[0];
 }
 
 function fetchRelatedVideos(id) {
-  const allOtherVideos = videosLite.filter((obj) => obj.id != id);
+  const allOtherVideos = videosLite.filter((obj) => obj.id !== id);
   return allOtherVideos;
 }
 
@@ -30,7 +30,6 @@ function App() {
       <Header />
       <Hero videoDetails={thisVideo} />
       <Comments comments={thisVideo.comments} />
-
       <NextVideo videos={allOtherVideos} setThisVideoId={setThisVideoId} />
     </div>
   );
