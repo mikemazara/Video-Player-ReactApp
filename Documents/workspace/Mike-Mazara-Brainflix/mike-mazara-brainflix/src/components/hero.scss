@@ -1,9 +1,9 @@
 .hero{
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-wrap: wrap;
     &__video-player{
-        width: 100vw;
+        width: 100%;
         margin-top: 0;
     }
 }
