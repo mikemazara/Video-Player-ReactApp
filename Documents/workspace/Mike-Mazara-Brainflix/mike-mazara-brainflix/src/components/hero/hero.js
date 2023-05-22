@@ -27,7 +27,7 @@ const Hero = ({
     <section className="hero">
       <div className="hero__video">
         <video className="hero__video-player" poster={image} controls>
-          <source src={video} type="video/mp4" />
+          <source className="hero__video-image" src={video} type="video/mp4" />
         </video>
       </div>
       <div className="hero__details">

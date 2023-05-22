@@ -18,9 +18,14 @@
         }
     }
     &__video-player{
-        width: 100%;
+        width: 100vw;
         margin-top: 0;
+        max-height: 35rem;
+        @include tablet{
+            width: 100%;
+        }
     }
+
     &__details{
         display: flex;
         flex-wrap: wrap;
