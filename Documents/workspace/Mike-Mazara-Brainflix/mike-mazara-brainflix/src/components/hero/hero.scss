@@ -12,6 +12,10 @@
             padding-right: 6vw;
             background-color: $secondary-black;
         }
+        @include desktop{
+            padding-inline: 17vw;
+
+        }
     }
     &__video-player{
         width: 100%;
@@ -22,6 +26,12 @@
         flex-wrap: wrap;
         padding-left: 6vw;
         padding-right: 8vw;
+        @include desktop{
+            padding-left: 10vw;
+            width: 55vw;
+            border-right: 2px solid $secondary-grey;
+            padding-right: 0;
+        }
         &-title{
             text-align: left;
             width: 100%;
@@ -48,7 +58,7 @@
         &-info{
             display: flex;
             justify-content: space-between;
-            width: 80%;
+            width: 100%;
             height: 8rem;
             text-align: left;
             @include tablet{
@@ -56,11 +66,15 @@
                 height: 2.5rem;
                 margin-bottom: 0rem;
             }
+            @include desktop{
+                padding-right: 2rem;
+            }
         }
         &-channel{
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            flex-wrap: wrap;
             width: 100%;
             height: 4rem;
             margin-bottom: 1.5rem;
@@ -68,32 +82,45 @@
                 width: 100%;
                 height: 2.5rem;
                 margin-bottom: 1rem;
+                flex-wrap: nowrap;
             }
         }
         &-numbers{
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            flex-wrap: wrap;
             width: 100%;
             height: 4rem;
             margin-bottom: 1.5rem;
+            padding-left: 25vw;
             @include tablet{
                 width: 50%;
                 height: 2.5rem;
                 margin-bottom: 1rem;
                 justify-content: flex-end;
                 align-items: flex-start;
+                flex-wrap: nowrap;
                 
 
+            }
+            @include desktop{
+                padding-left: 0;
+                padding-right: 2rem;
             }
         }
 
         &-name{
             font-size: 1.75rem;
+            margin-bottom: 0.25rem;
             @include tablet{
                 font-size: 1rem;
                 margin-top: 0;
                 padding-right: 4vw;
+            }
+            @include desktop{
+                padding-right: 1vw;
+                width: 7rem;
             }
         }
         &-date{
@@ -102,6 +129,7 @@
             @include tablet{
                 font-size: 1rem;
                 margin-top: 0;
+                margin-bottom: 0.25rem;
             }
         }
         &-stats{
@@ -156,6 +184,9 @@
                 padding-top: 1.5rem;
                 line-height: 1.5;
                 margin-top: 0;
+            }
+            @include desktop{
+                padding-right: 2rem;
             }
         }
 

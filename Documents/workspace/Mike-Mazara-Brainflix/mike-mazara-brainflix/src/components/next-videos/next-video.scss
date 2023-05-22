@@ -7,6 +7,13 @@
         padding-left: 6vw;
         padding-right: 6vw;
     }
+    @include desktop{
+        width: 25vw;
+        position: absolute;
+        right: 0;
+        top: 44vw;
+        padding-left: 0;
+    }
 
   @include flex-container;
     flex-direction: column;
@@ -52,6 +59,12 @@
             margin-bottom: 1rem;
             margin-right: 3vw;
         }
+        @include desktop{
+            width: 11rem;
+            height: 5rem;
+            margin-bottom: 1rem;
+            margin-right: 1vw;
+        }
     }
     &__img{
         width: 33vw;
@@ -64,6 +77,13 @@
             position: relative;
             bottom: 1rem;
         }
+        @include desktop{
+            width: 11rem;
+            height: 6rem;
+            position: relative;
+            bottom: 0rem;
+            right: .5rem;
+        }
     }
     &__details{
         @include flex-container;
@@ -72,6 +92,10 @@
         margin-left: 5vw;
         @include tablet{
             width: 60%;
+            margin-left: 0vw;
+        }
+        @include desktop{
+            width: 80%;
             margin-left: 0vw;
         }
     }
@@ -83,6 +107,10 @@
             font-size: 1.25rem;
             margin-bottom: .25rem;
         }
+        @include desktop{
+            font-size: 1rem;
+            margin-bottom: .25rem;
+        }
     }
     &__channel{
         font-size: 1.75rem;
@@ -92,6 +120,10 @@
             font-size: 1.25rem;
             margin-bottom: 0;
             margin-top: 1rem;
+        }
+        @include desktop{
+            font-size: 1rem;
+            margin-bottom: 0;
         }
     }
 }
