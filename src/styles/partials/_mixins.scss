@@ -1,0 +1,38 @@
+@use './variables' as *;
+
+@mixin font-1 {
+        font-family: 'Avenir Next1', Arial, Helvetica, sans-serif;
+        src: url(../../assets/font/AvenirNextLTPro-Regular.otf);
+        font-weight: normal;
+        font-style: normal;
+        color: $primary-black;
+    
+}
+
+@mixin font-2 {
+        font-family: 'Avenir Next2', Arial, Helvetica, sans-serif;
+        src: url(../../assets/font/AvenirNextLTPro-Bold.otf);
+        font-weight: bold;
+        font-style: normal;
+        color: $primary-black;
+}
+
+@mixin flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+
+}
+
+@mixin tablet {
+        @media (min-width: $tablet) {
+                @content;
+        }
+}
+
+@mixin desktop {
+        @media (min-width: $desktop) {
+                @content;
+        }
+}
