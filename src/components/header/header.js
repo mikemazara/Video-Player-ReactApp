@@ -1,4 +1,4 @@
-import "./header.scss";
+import "./Header.scss";
 import logo from "../../assets/logo/BrainFlix-logo.svg";
 import avatar from "../../assets/images/mohan-muruge.jpg";
 import searchIcon from "../../assets/icons/search.svg";

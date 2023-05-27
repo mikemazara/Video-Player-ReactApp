@@ -1,4 +1,4 @@
-import "./next-video.scss";
+import "./NextVideo.scss";
 
 const NextVideo = ({ videos, setThisVideoId }) => {
   return (

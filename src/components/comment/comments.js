@@ -1,36 +1,8 @@
-import "./comments.scss";
+import "./Comments.scss";
 import avatar from "../../assets/images/mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
+import CommentsList from "./CommentSubComponents/CommentList";
 
-function CommentItem({ comment: { id, name, timestamp, comment } }) {
-  let date = new Date(timestamp);
-  let mmDdYyyy = date.toLocaleDateString();
-
-  return (
-    <div className="comments__comment" key={id}>
-      <div className="comments__list-avatar-container">
-        <img className="comments__list-avatar" src="#" alt="User avatar" />
-      </div>
-      <div className="comments__list-comment">
-        <div className="comments__top">
-          <h3 className="comments__name">{name}</h3>
-          <p className="comments__date">{mmDdYyyy}</p>
-        </div>
-        <p className="comments__paragraph">{comment}</p>
-      </div>
-    </div>
-  );
-}
-
-function CommentsList({ comments }) {
-  return (
-    <div className="comments__list">
-      {comments.map((comment) => (
-        <CommentItem key={comment.id} comment={comment} />
-      ))}
-    </div>
-  );
-}
 function CommentsContainner({ comments }) {
   return (
     <section className="comments">

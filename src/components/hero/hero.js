@@ -1,4 +1,4 @@
-import "./hero.scss";
+import "./Hero.scss";
 import likeIcon from "../../assets/icons/likes.svg";
 import viewsIcon from "../../assets/icons/views.svg";
 
