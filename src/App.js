@@ -1,9 +1,7 @@
 import "./App.scss";
 import { useState, useEffect } from "react";
-import Header from "./components/Header/Header.js";
-import Hero from "./components/Hero/Hero.js";
-import Comments from "./components/Comment/Comments";
-import NextVideo from "./components/NextVideos/NextVideo";
+import HomePage from "./page/HomePage/HomePage";
+import VideoDetails from "./page/VideoDetailsPage/VideoDetails";
 import {
   BrowserRouter,
   Routes,
@@ -16,24 +14,14 @@ import useThisVideo from "./components/ApiFunctions/MainVideo";
 import useAllOtherVideos from "./components/ApiFunctions/VideoList";
 
 function App() {
-  const [thisVideoId, setThisVideoId] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-  );
-
-  const thisVideo = useThisVideo(thisVideoId);
-  const allOtherVideos = useAllOtherVideos(thisVideoId);
-
-  if (!thisVideo) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className="App">
-      <Header />
-
-      <Hero videoDetails={thisVideo} />
-      <Comments comments={thisVideo.comments} />
-      <NextVideo videos={allOtherVideos} setThisVideoId={setThisVideoId} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<VideoDetails />} />
+          <Route path="/:id" element={<VideoDetails />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

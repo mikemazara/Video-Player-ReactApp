@@ -36,6 +36,8 @@
         @include flex-container;
         width: 100%;
         margin-bottom: 3rem;
+        text-decoration: none;
+        color: $primary-black;
         @include tablet{
             width: 100%;
             margin-bottom: 2rem;

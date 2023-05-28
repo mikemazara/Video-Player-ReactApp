@@ -20,6 +20,9 @@ function useThisVideo(thisVideoId) {
   const [thisVideo, setThisVideo] = useState(null);
 
   useEffect(() => {
+    if (thisVideoId == null) {
+      return;
+    }
     fetchMainVideoFile(thisVideoId)
       .then((video) => setThisVideo(video))
       .catch((error) => console.error(error));

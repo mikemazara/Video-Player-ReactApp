@@ -1,6 +1,9 @@
 import "./Hero.scss";
 import likeIcon from "../../assets/icons/likes.svg";
 import viewsIcon from "../../assets/icons/views.svg";
+import { Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import useThisVideo from "../ApiFunctions/MainVideo";
 
 const formatDate = (timestamp) => {
   const date = new Date(timestamp);
@@ -8,26 +11,19 @@ const formatDate = (timestamp) => {
   return mmDdYyyy;
 };
 
-const Hero = ({
-  videoDetails: {
-    id,
-    title,
-    channel,
-    image,
-    description,
-    views,
-    likes,
-    duration,
-    video,
-    timestamp,
-    comments,
-  },
-}) => {
+const Hero = ({ videoDetails }) => {
+  const { title, channel, image, description, views, likes, timestamp } =
+    videoDetails;
+
   return (
     <section className="hero">
       <div className="hero__video">
         <video className="hero__video-player" poster={image} controls>
-          <source className="hero__video-image" src={video} type="video/mp4" />
+          <source
+            className="hero__video-image"
+            src={videoDetails.video}
+            type="video/mp4"
+          />
         </video>
       </div>
       <div className="hero__details">
