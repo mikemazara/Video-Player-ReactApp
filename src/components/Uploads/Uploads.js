@@ -9,12 +9,10 @@ const Uploads = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setSuccessMessage(
-      "Video successfully uploaded! Redirecting to Home Page..."
-    );
+    setSuccessMessage("Video successfully uploaded!");
 
     setTimeout(function () {
-      window.location.href = "/";
+      window.location.href = "/upload";
     }, 1500);
   }
   return (
