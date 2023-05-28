@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import useThisVideo from "./components/ApiFunctions/MainVideo";
 import useAllOtherVideos from "./components/ApiFunctions/VideoList";
+import VideoUploads from "./page/VideoUploadPage/VideoUploads";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<VideoDetails />} />
           <Route path="/:id" element={<VideoDetails />} />
+          <Route path="/upload" element={<VideoUploads />} />
         </Routes>
       </BrowserRouter>
     </div>
