@@ -23,7 +23,7 @@ const Uploads = () => {
       </div>
       <div>
         <form className="uploads__form" onSubmit={handleSubmit}>
-          <div>
+          <div className="uploads__form-container">
             <label className="uploads__video-label" htmlFor="uploads__video">
               VIDEO THUMBNAIL
             </label>
