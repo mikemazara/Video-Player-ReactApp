@@ -1,0 +1,184 @@
+@use  '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.uploads{
+    margin: 0 0;
+    display: flex;
+    @include flex-container;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    flex-wrap: nowrap;
+    width: 83vw;
+    height: 100%;
+    padding-left: 12vw;
+    padding-right: 5vw;
+    border-top: 2px solid $secondary-grey;
+    @include tablet{
+        width: 89vw;
+        padding-left: 6vw;
+        padding-right: 5vw;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    &__header{
+        @include font-2;
+        font-size: 4rem;
+        text-align: left;
+    }
+
+
+    &__form{
+        @include tablet{
+            border-top: 2px solid $secondary-grey;
+            padding-top: 2rem;
+        }
+    }
+
+    &__video-label{
+        @include font-2;
+        font-size: 1.5rem;
+        color: $primary-grey;
+    }
+
+    &__video-container{
+        background-image: url(../../assets/images/Upload-video-preview.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 82vw;
+        height: 40vw;
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        @include tablet{
+            width: 47vw;
+            height: 26vw;
+        }
+    }
+    &__video{
+        width: 100%;
+        height: 100%;
+
+        
+    }
+    &__title-label{
+        @include font-2;
+        font-size: 1.5rem;
+        color: $primary-grey;
+    }
+    &__title-input{
+        width: 82vw;
+        height: 4rem;
+        border: 1px solid $primary-grey;
+        border-radius: 8px;
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        @include font-1;
+        font-size: 1.5rem;
+        background-color: $secondary-white;
+        &:focus{
+            outline: $primary-blue auto 5px;
+        }
+        &::placeholder{
+            color: $primary-black;;
+        }
+        @include tablet{
+            width: 89vw;
+        }
+    }
+    &__description-label{
+        @include font-2;
+        font-size: 1.5rem;
+        color: $primary-grey;
+    }
+
+    &__description-input{
+        width: 82vw;
+        height: 10rem;
+        border: 1px solid $primary-grey;
+        border-radius: 8px;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        @include font-1;
+        font-size: 1.5rem;
+        background-color: $secondary-white;
+        &:focus{
+            outline: $primary-blue auto 5px;
+        }
+        &::placeholder{
+            color: $primary-black;;
+        }
+        @include tablet{
+            width: 89vw;
+        }
+    }
+
+    &__button-container{
+        @include tablet{
+            @include flex-container;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            width: 91vw;
+            margin-right: 0;
+            padding-top: 2rem;
+            border-top: 2px solid $secondary-grey;
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__publish-icon{
+        position: relative;
+        left: 3vw;
+        top: 3.75rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &__button{
+        width: 82vw;
+        height: 4rem;
+        border: none;
+        border-radius: 8px;
+        margin-bottom: 2vh;
+        @include font-2;
+        font-size: 1.5rem;
+        background-color: $primary-blue;
+        color: $secondary-white;
+        &:hover{
+            cursor: pointer;
+        }
+        @include tablet{
+            width: 20vw;
+            margin-bottom: 0;
+        }
+    }
+
+    &__cancel-button{
+        border: none;
+        margin-left: 30vw;
+        margin-top: 3rem;
+        margin-bottom: 2vh;
+        @include font-2;
+        font-size: 1.5rem;
+        color: $primary-blue;
+        background-color: $primary-white;
+        &:hover{
+            cursor: pointer;
+        }
+        @include tablet{
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-right: 10vw;
+        }
+    }
+}

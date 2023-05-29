@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import "./Uploads.scss";
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
+import publishIcon from "../../assets/icons/publish.svg";
 
 const Uploads = () => {
   const [successMessage, setSuccessMessage] = useState("");
@@ -18,17 +19,22 @@ const Uploads = () => {
   return (
     <section className="uploads">
       <div>
-        <h1 className="uploads__header">Uploads</h1>
+        <h1 className="uploads__header">Upload Video</h1>
       </div>
       <div>
         <form className="uploads__form" onSubmit={handleSubmit}>
           <div>
+            <label className="uploads__video-label" htmlFor="uploads__video">
+              VIDEO THUMBNAIL
+            </label>
             <div className="uploads__video-container">
-              <img
+              <input
                 className="uploads__video"
+                type="image"
                 src={uploadImage}
-                alt="Video thumbnail"
-              />
+                id="uploads__video"
+                name="uploads__video"
+              ></input>
             </div>
 
             <label className="uploads__title-label" htmlFor="uploads__title">
@@ -57,15 +63,20 @@ const Uploads = () => {
               required
             ></textarea>
           </div>
-          <div>
+          <div className="uploads__button-container">
+            <img
+              className="uploads__publish-icon"
+              src={publishIcon}
+              alt="User avatar"
+            />
+            <button className="uploads__button" type="submit">
+              PUBLISH
+            </button>
             <Link to="/">
               <button className="uploads__cancel-button" type="button">
                 CANCEL
               </button>
             </Link>
-            <button className="uploads__button" type="submit">
-              PUBLISH
-            </button>
           </div>
         </form>
         <p>{successMessage}</p>
