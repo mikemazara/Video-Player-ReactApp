@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "../../components/Header/Header.js";
 import Hero from "../../components/Hero/Hero.js";
-import Comments from "../../components/Comment/Comments";
+import Comments from "../../components/Comment/Comments.js";
 import NextVideo from "../../components/NextVideos/NextVideo";
 import {
   BrowserRouter,
