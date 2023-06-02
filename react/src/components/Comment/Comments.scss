@@ -1,0 +1,301 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.comments{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    @include desktop{
+        width: 65vw;
+        border-right: 2px solid $secondary-grey;
+    }
+    &__count{
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-size: 1.875rem;
+        color: $primary-black;
+        font-weight: 700;
+        padding-left: 6vw;
+        @include tablet{
+            width: 100%;
+            font-size: 1.125rem;
+        }
+        @include desktop{
+            padding-left: 10vw;
+            margin-top: 2rem;
+        }
+    }
+    &__form{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 2vh;
+        margin-left: 6vw;
+        margin-right: 2vw;
+        border-bottom: 2px solid $secondary-grey;
+        padding-bottom: 2rem;
+        margin-top: 2rem;
+        @include tablet{
+            margin-right: 0vw;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        @include desktop{
+            margin-left: 10vw;
+            width: 55vw;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__form-avatar-container{
+        height: 4.75rem;
+        width: 5.25rem;
+        border: none;
+        border-radius: 50%;
+        overflow: hidden;
+        @include tablet{
+            height: 3.25rem;
+            width: 3.25rem;
+            margin-top: 2rem;
+        }
+        @include desktop{
+            height: 3.5rem;
+            width: 3.75rem;
+            margin-top: 1rem;
+        }
+    }
+    &__form-avatar{
+        height: 5.25rem;
+        width: 6.75rem;
+        @include tablet{
+            height: 3.75rem;
+            width: 4.75rem;
+        }
+    }
+
+    &__input{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        margin-left: 4vw;
+        @include tablet{
+            flex-wrap: wrap;
+            width: 75vw;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            
+        }
+        @include desktop{
+            width: 55vw;
+            margin-left: 5vw;
+        }
+    }
+
+    &__input-text{
+        display: block;
+        @include font-1;
+        width: 60vw;
+        height: 11rem;
+        border-radius: 8px;
+        border: 2px solid #E5E5E5;
+        background-color: $secondary-white;
+        font-size: 1.625rem;
+        padding-left: 2rem;
+        padding-top: 2rem;
+        @include tablet{
+            width: 55%;
+            height: 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid $secondary-grey;
+            padding-top: 2%;
+        }
+        @include desktop{
+            width: 27vw;
+        }
+
+        &::placeholder{
+            color: $primary-black;;
+        }
+        &:focus{
+            outline: none;
+            border: 2px solid $primary-blue;
+        }
+        
+    }
+
+    &__input-label{
+        display: block;
+        @include font-2;
+        font-size: 1.5rem;
+        color: $primary-grey;
+        margin-bottom: 1rem;
+        @include tablet{
+            font-size: 1rem;
+            display: flex;
+            width: 80%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__input-button{
+        display: block;
+        @include font-2;
+        font-size: 1.5rem;
+        color: $primary-white;
+        background-color: $primary-blue;
+        border: none;
+        border-radius: 8px;
+        width: 67vw;
+        height: 5rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        @include tablet{
+            width: 29%;
+            height: 3.5rem;
+            font-size: .875rem;
+            border-radius: 5px;
+            border: 1px solid $secondary-grey;
+            padding-top: 1%;
+            margin-bottom: 0;
+            margin-left: 1vw;
+        }
+        @include desktop{
+            width: 14vw;
+            height: 3.125rem;
+            font-size: 1rem;
+            margin-left: 0;
+        }
+        &:hover{
+            background-color: $secondary-blue;
+        }
+    }
+
+    &__input-icon{
+        position: relative;
+        left: 2rem;
+        top: 3.5rem;
+        width: 2rem;
+        @include tablet{
+            width: 1.5rem;
+            top: 1rem;
+            left: 3rem;
+        }
+        @include desktop{
+            width: 1.25rem;
+            top: 1rem;
+            left: 2rem;
+        }
+    }
+
+    &__list{
+        width: 100%;
+        @include flex-container;
+        flex-direction: column;
+        margin-left: 6vw;
+        margin-right: 2vw;
+        margin-top: 2rem;
+        @include desktop{
+            margin-left: 10vw;
+            width: 55vw;
+        }
+        &-avatar-container{
+            height: 5rem;
+            width: 5rem;
+            border: none;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            background-color: $secondary-grey;
+            @include tablet{
+                height: 3.25rem;
+                width: 3.25rem;
+                margin-bottom: 0;
+            }
+        }
+        &-avatar{
+            display: none;
+        }
+    
+    }
+    &__comment{
+        @include flex-container;
+        width: 93%;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid $secondary-grey;
+        padding-bottom: 2rem;
+        @include desktop{
+            flex-wrap: nowrap;
+            width: 100%;
+            padding-top: 2rem;
+            margin-bottom: 0;
+        }
+    }
+
+
+
+    &__list-comment{
+        width: 60vw;
+        text-align: left;
+        margin-left: 8vw;
+        @include tablet{
+            width: 70vw;
+            margin-left: 3vw;
+        }
+        @include desktop{
+            width: 48vw;
+            margin-left: 5vw;
+            padding-right: 3vw;
+        }
+
+        
+    }
+
+    &__top{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name{
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        @include tablet{
+            font-size: 1rem;
+        }
+
+    }
+
+    &__date{
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        color: $primary-grey;
+        @include tablet{
+            font-size: 1rem;
+        }
+    }
+
+    &__paragraph{
+        margin-top: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+        font-size: 1.5rem;
+        @include tablet{
+            font-size: 1rem;
+        }
+        @include desktop{
+            line-height: 1.5;
+        }
+    }
+
+}
