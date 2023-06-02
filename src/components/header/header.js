@@ -3,15 +3,15 @@ import logo from "../../assets/logo/BrainFlix-logo.svg";
 import avatar from "../../assets/images/mohan-muruge.jpg";
 import searchIcon from "../../assets/icons/search.svg";
 import uploadIcon from "../../assets/icons/upload.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <header className="header">
       <div className="header__logo">
-        <Link to="/">
+        <NavLink to="/">
           <img className="header__logo-image" src={logo} alt="BrainFlix logo" />
-        </Link>
+        </NavLink>
       </div>
       <div className="header__search">
         <img
@@ -34,11 +34,11 @@ function Header() {
           src={uploadIcon}
           alt="upload arrow"
         ></img>
-        <Link to="/upload" className="header__button">
+        <NavLink to="/upload" className="header__button">
           <button type="button" className="header__button">
             UPLOAD
           </button>
-        </Link>
+        </NavLink>
       </div>
     </header>
   );

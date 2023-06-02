@@ -12,7 +12,7 @@ const NextVideo = ({ videos }) => {
         {videos.map((obj) => {
           const { id, title, channel, image } = obj;
           return (
-            <Link to={`/${id}`} className="next-video__video" key={id}>
+            <Link to={`/video/${id}`} className="next-video__video" key={id}>
               <div className="next-video__img-container">
                 <img className="next-video__img" key={id} src={image} />
               </div>
