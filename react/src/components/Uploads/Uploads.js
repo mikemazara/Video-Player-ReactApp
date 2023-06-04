@@ -4,16 +4,38 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import "./Uploads.scss";
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
+import axios from "axios";
 
 const Uploads = () => {
   const [successMessage, setSuccessMessage] = useState("");
 
-  function handleSubmit(e) {
+  const uploadVideo = (e) => {
     e.preventDefault();
+    const videoTitle = e.target.uploads__title.value;
+    const videoDescription = e.target.uploads__description.value;
+
+    axios
+      .post("http://localhost:8080/videos", {
+        title: videoTitle,
+        description: videoDescription,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    console.log(videoTitle);
+    console.log(videoDescription);
+  };
+
+  function handleSubmit(e) {
+    uploadVideo(e);
     setSuccessMessage("Video successfully uploaded!");
 
     setTimeout(function () {
-      window.location.href = "/upload";
+      window.location.href = "/";
     }, 1500);
   }
   return (
