@@ -1,20 +1,5 @@
 @use './variables' as *;
-
-@font-face{
-        font-family: 'Avenir Next1';
-        src: url(../../assets/font/AvenirNextLTPro-Regular.otf);
-        font-weight: normal;
-        font-style: normal;
-        color: $primary-black;
- }
-
- @font-face{
-        font-family: 'Avenir Next2';
-         src: url(../../assets/font/AvenirNextLTPro-Bold.otf);
-         font-weight: normal;
-         font-style: normal;
-         color: $primary-black;
- }
+@use './fonts' as *;
 
 @mixin font-1 {
         font-family: 'Avenir Next1', Arial, Helvetica, sans-serif;

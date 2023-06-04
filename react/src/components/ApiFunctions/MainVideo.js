@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const apiKey = "7201c760-19ae-48b7-8316-ea927c367d11";
-
 async function fetchMainVideoFile(id) {
   try {
     const response = await axios.get(`http://localhost:8080/videos/${id}`);

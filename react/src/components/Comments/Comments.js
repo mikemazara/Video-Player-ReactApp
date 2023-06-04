@@ -1,27 +1,9 @@
-import "./Comments.scss";
+import CommentsList from "./CommentList";
 import avatar from "../../assets/images/mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
-import CommentsList from "./CommentSubComponents/CommentList";
-import axios from "axios";
+import "./Comments.scss";
 
 function Comments({ comments }) {
-  const uploadComments = (e) => {
-    e.preventDefault();
-    const comment = {
-      name: "Mohan Muruge",
-      timestamp: Date.now(),
-      comment: e.target.comment.value,
-    };
-
-    axios
-      .post(`http://localhost:8080/videos/comments`, comment)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
   return (
     <section className="comments">
       <h2 className="comments__count">{comments.length} Comments</h2>
@@ -33,7 +15,7 @@ function Comments({ comments }) {
             alt="User avatar"
           />
         </div>
-        <form className="comments__input" onSubmit={uploadComments}>
+        <form className="comments__input" onClick={(e) => e.preventDefault()}>
           <label className="comments__input-label" htmlFor="comment">
             JOIN THE CONVERSATION
           </label>

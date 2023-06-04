@@ -1,10 +1,9 @@
-import { redirect } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
-import "./Uploads.scss";
+import axios from "axios";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
-import axios from "axios";
+import "./Uploads.scss";
 
 const Uploads = () => {
   const [successMessage, setSuccessMessage] = useState("");
@@ -19,15 +18,9 @@ const Uploads = () => {
         title: videoTitle,
         description: videoDescription,
       })
-      .then((response) => {
-        console.log(response);
-      })
       .catch((error) => {
         console.log(error);
       });
-
-    console.log(videoTitle);
-    console.log(videoDescription);
   };
 
   function handleSubmit(e) {
@@ -54,6 +47,7 @@ const Uploads = () => {
                 className="uploads__video"
                 type="image"
                 src={uploadImage}
+                alt="Upload video"
                 id="uploads__video"
                 name="uploads__video"
               ></input>

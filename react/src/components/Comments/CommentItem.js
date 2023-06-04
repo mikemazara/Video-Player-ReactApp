@@ -1,7 +1,4 @@
 import React from "react";
-import useAllOtherVideos from "../../ApiFunctions/VideoList";
-import { Link, useParams } from "react-router-dom";
-import useThisVideo from "../../ApiFunctions/MainVideo";
 
 function CommentItem({ comment: { id, name, timestamp, comment } }) {
   let date = new Date(timestamp);
