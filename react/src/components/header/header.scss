@@ -1,13 +1,21 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
+*{
+    margin: 0;
+    text-decoration: none;
+}
+
 .header{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-content: center;
     height: 23rem;
-    width: 100vw;
+    width: 92vw;
+    margin-right: 0;
+    padding-left: 3vw;
+    flex-wrap: wrap;
     @include tablet{
         height: 6rem;
         @include flex-container;
@@ -23,7 +31,7 @@
     }
     &__logo{
         text-align: center;
-        width: 40vw;
+        width: 100%;
         height: 6rem;
         margin-top: 0rem;
         @include tablet{
@@ -52,22 +60,21 @@
     }
     &__search{
         display: flex;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
         width: 94vw;
-        padding-left: 6vw;
         @include tablet{
-            width: 30vw;
+            width: 29vw;
             height: 100%;
-            margin-left: 10vw;
-            margin-top: 1rem;
+            margin-left: 14vw;
+            margin-top: 0.5rem;
             padding-left: 0vw;
+            margin-right: 2vw;
         }
         @include desktop{
             width: 22vw;
             height: 100%;
             margin-left: 10vw;
-            margin-top: 1rem;
             padding-left: 0vw;
         }
     }
@@ -89,6 +96,7 @@
 
     &__search-bar{
         width: 60vw;
+        max-width: 25rem;
         height: 4rem;
         border-radius: 8px;
         border: 2px solid $primary-grey;
@@ -106,7 +114,6 @@
         }
         @include desktop{
             width: 18vw;
-            height: 3rem;
             font-size: 1rem;
             padding-left: 15%;
         }
@@ -152,11 +159,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        width: 98vw;
         height: 5rem;
         margin-bottom: 1rem;
         @include tablet{
-            width: 25vw;
+            width: 20vw;
             height: 100%;
             margin-bottom: 0rem;
             margin-left: 0vw;
@@ -171,20 +178,26 @@
         text-decoration: none;
         display: flex;
         align-content: center;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         @include font-2;
-        width: 85%;
-        height: 100%;
+        width: 86vw;
+        max-width: 36rem;
+        height: 4rem;
         border-radius: 8px;
         border: none;
         background-color: $primary-blue;
         color: #FFFFFF;
         font-size: 1.5rem;
         margin-top: 0;
+        padding-top: 0.25rem;
         @include tablet{
-            width: 100%;
-            height: 3.25rem;
+            width: 18vw;
+            max-width: 11rem;
+            flex-wrap: nowrap;
+            align-items: center;
+            height: 2.75rem;
+            padding-right: 5rem;
             font-size: 1rem;
             border-radius: 5px;
             font-size: .875rem;
@@ -195,12 +208,10 @@
         }
         &-icon{
             width: 2.5rem;
-            position: relative;
-            margin-right: 0;
-            left: 8vw;
+            margin-right: 25vw;
             @include tablet{
                 width: 1.5rem;
-                left: 3.5vw;
+                margin-right: 2vw;
             }
         }
     }

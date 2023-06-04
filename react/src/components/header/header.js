@@ -29,13 +29,13 @@ function Header() {
         </div>
       </div>
       <div className="header__button-container">
-        <img
-          className="header__button-icon"
-          src={uploadIcon}
-          alt="upload arrow"
-        ></img>
-        <NavLink to="/upload" className="header__button">
+        <NavLink to="/upload">
           <button type="button" className="header__button">
+            <img
+              className="header__button-icon"
+              src={uploadIcon}
+              alt="upload arrow"
+            ></img>
             UPLOAD
           </button>
         </NavLink>
