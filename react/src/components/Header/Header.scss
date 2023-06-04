@@ -1,0 +1,219 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+*{
+    margin: 0;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 23rem;
+    width: 92vw;
+    margin-right: 0;
+    padding-left: 3vw;
+    flex-wrap: wrap;
+    @include tablet{
+        height: 6rem;
+        @include flex-container;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        padding-left: 6vw;
+        width: 94vw;
+    }
+    @include desktop{
+        height: 6rem;
+        padding-inline: 10vw;
+        width: 80vw;
+    }
+    &__logo{
+        text-align: center;
+        width: 100%;
+        height: 6rem;
+        margin-top: 0rem;
+        @include tablet{
+            width: 17vw;
+            height: 100%;
+            margin-top: 0rem;
+        }
+        @include desktop{
+            width: 10vw;
+            height: 100%;
+            margin-top: 0rem;
+            margin-right: 17vw;
+        }
+        &-image{
+            width: 40vw;
+            height: 100%;
+            @include tablet{
+                width: 17vw;
+                height: 100%;
+            }
+            @include desktop{
+                width: 10vw;
+                height: 100%;
+            }
+        }
+    }
+    &__search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 94vw;
+        @include tablet{
+            width: 29vw;
+            height: 100%;
+            margin-left: 14vw;
+            margin-top: 0.5rem;
+            padding-left: 0vw;
+            margin-right: 2vw;
+        }
+        @include desktop{
+            width: 22vw;
+            height: 100%;
+            margin-left: 10vw;
+            padding-left: 0vw;
+        }
+    }
+
+    &__search-icon{
+        position: relative;
+        left: 8vw;
+        bottom: .5rem;
+        width: 2rem;
+        @include tablet{
+            width: 1.5rem;
+            left: 3.5vw;
+        }
+        @include desktop{
+            width: 1.5rem;
+            left: 2.5vw;
+        }
+    }
+
+    &__search-bar{
+        width: 60vw;
+        max-width: 25rem;
+        height: 4rem;
+        border-radius: 8px;
+        border: 2px solid $primary-grey;
+        background-color: $secondary-white;
+        font-size: 1.5rem;
+        padding-left: 4rem;
+        margin-bottom: 1rem;
+        @include tablet{
+            width: 25vw;
+            height: 2.5rem;
+            font-size: 1rem;
+            padding-left: 15%;
+            border-radius: 5px;
+            border: 1px solid $secondary-grey;
+        }
+        @include desktop{
+            width: 18vw;
+            font-size: 1rem;
+            padding-left: 15%;
+        }
+        &::placeholder{
+            color: $primary-black;;
+        }
+        &:focus{
+            outline: none;
+            border: 2px solid $primary-blue;
+        }
+    }
+    &__avatar-container{
+        height: 4.75rem;
+        width: 4.75rem;
+        border: none;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: 4vw;
+        margin-bottom: 1rem;
+        @include tablet{
+            height: 3.25rem;
+            width: 3.25rem;
+            margin-left: 0vw;
+            margin-bottom: 0rem;
+            position: absolute;
+            right: 4vw;
+            top: 1.25rem;
+        }
+        @include desktop{
+            right: 10vw;
+        }
+    }
+    &__avatar{
+        height: 5.25rem;
+        width: 6.75rem;
+        padding-right: 0rem;
+        @include tablet{
+            height: 3.75rem;
+            width: 4.75rem;
+        }
+    }
+    &__button-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 98vw;
+        height: 5rem;
+        margin-bottom: 1rem;
+        @include tablet{
+            width: 20vw;
+            height: 100%;
+            margin-bottom: 0rem;
+            margin-left: 0vw;
+        }
+        @include desktop{
+            width: 14vw;
+            height: 6rem;
+        }
+
+    }
+    &__button{
+        text-decoration: none;
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        @include font-2;
+        width: 86vw;
+        max-width: 36rem;
+        height: 4rem;
+        border-radius: 8px;
+        border: none;
+        background-color: $primary-blue;
+        color: #FFFFFF;
+        font-size: 1.5rem;
+        margin-top: 0;
+        padding-top: 0.25rem;
+        @include tablet{
+            width: 18vw;
+            max-width: 11rem;
+            flex-wrap: nowrap;
+            align-items: center;
+            height: 2.75rem;
+            padding-right: 5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            font-size: .875rem;
+        }
+        &:hover{
+            cursor: pointer;
+            background-color: $secondary-blue;
+        }
+        &-icon{
+            width: 2.5rem;
+            margin-right: 25vw;
+            @include tablet{
+                width: 1.5rem;
+                margin-right: 2vw;
+            }
+        }
+    }
+}
+
