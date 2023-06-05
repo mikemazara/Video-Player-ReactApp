@@ -9,13 +9,13 @@ const formatDate = (timestamp) => {
 };
 
 const Hero = ({ videoDetails }) => {
-  const { title, channel, image, description, views, likes, timestamp } =
+  const { title, channel, image, description, views, likes, timestamp, id } =
     videoDetails;
 
   return (
     <section className="hero">
       <div className="hero__video">
-        <video className="hero__video-player" poster={image} controls>
+        <video className="hero__video-player" poster={image} controls key={id}>
           <source
             className="hero__video-image"
             src={videoDetails.video}
