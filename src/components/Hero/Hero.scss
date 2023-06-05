@@ -84,7 +84,7 @@
             align-items: center;
             flex-wrap: wrap;
             width: 100%;
-            height: 4rem;
+            height: 9rem;
             margin-bottom: 1.5rem;
             @include tablet{
                 width: 100%;
@@ -99,7 +99,7 @@
             align-items: center;
             flex-wrap: wrap;
             width: 100%;
-            height: 4rem;
+            height: 8rem;
             margin-bottom: 1.5rem;
             padding-left: 25vw;
             @include tablet{
@@ -186,6 +186,7 @@
             font-size: 1.75rem;
             text-align: left;
             padding-top: 2rem;
+            margin-top: 1.5rem;
             @include tablet{
                 width: 100%;
                 font-size: 1.125rem;
