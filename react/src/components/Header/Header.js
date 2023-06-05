@@ -1,9 +1,9 @@
-import "./Header.scss";
-import logo from "../../assets/logo/BrainFlix-logo.svg";
+import { NavLink } from "react-router-dom";
 import avatar from "../../assets/images/mohan-muruge.jpg";
 import searchIcon from "../../assets/icons/search.svg";
 import uploadIcon from "../../assets/icons/upload.svg";
-import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo/BrainFlix-logo.svg";
+import "./Header.scss";
 
 function Header() {
   return (

@@ -1,9 +1,6 @@
-import "./Hero.scss";
 import likeIcon from "../../assets/icons/likes.svg";
 import viewsIcon from "../../assets/icons/views.svg";
-import { Link, useParams } from "react-router-dom";
-import { useEffect } from "react";
-import useThisVideo from "../ApiFunctions/MainVideo";
+import "./Hero.scss";
 
 const formatDate = (timestamp) => {
   const date = new Date(timestamp);

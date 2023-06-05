@@ -1,9 +1,9 @@
-import "./Comments.scss";
+import CommentsList from "./CommentList";
 import avatar from "../../assets/images/mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
-import CommentsList from "./CommentSubComponents/CommentList";
+import "./Comments.scss";
 
-function CommentsContainner({ comments }) {
+function Comments({ comments }) {
   return (
     <section className="comments">
       <h2 className="comments__count">{comments.length} Comments</h2>
@@ -15,7 +15,7 @@ function CommentsContainner({ comments }) {
             alt="User avatar"
           />
         </div>
-        <form className="comments__input">
+        <form className="comments__input" onClick={(e) => e.preventDefault()}>
           <label className="comments__input-label" htmlFor="comment">
             JOIN THE CONVERSATION
           </label>
@@ -32,13 +32,7 @@ function CommentsContainner({ comments }) {
             src={commentIcon}
             alt="commet icon"
           ></img>
-          <button
-            className="comments__input-button"
-            type="submit"
-            onClick={(e) => {
-              e.preventDefault();
-            }}
-          >
+          <button className="comments__input-button" type="submit">
             COMMENT
           </button>
         </form>
@@ -48,4 +42,4 @@ function CommentsContainner({ comments }) {
   );
 }
 
-export default CommentsContainner;
+export default Comments;

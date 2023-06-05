@@ -1,13 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const apiKey = "7201c760-19ae-48b7-8316-ea927c367d11";
-
 export async function fetchRelatedVideos() {
   try {
-    const response = await axios.get(
-      `https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`
-    );
+    const response = await axios.get(`http://localhost:8080/videos`);
     const videosLite = response.data;
     return videosLite;
   } catch (error) {

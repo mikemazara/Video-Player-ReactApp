@@ -1,19 +1,34 @@
-import { redirect } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
-import "./Uploads.scss";
+import axios from "axios";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
+import "./Uploads.scss";
 
 const Uploads = () => {
   const [successMessage, setSuccessMessage] = useState("");
 
-  function handleSubmit(e) {
+  const uploadVideo = (e) => {
     e.preventDefault();
+    const videoTitle = e.target.uploads__title.value;
+    const videoDescription = e.target.uploads__description.value;
+
+    axios
+      .post("http://localhost:8080/videos", {
+        title: videoTitle,
+        description: videoDescription,
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  function handleSubmit(e) {
+    uploadVideo(e);
     setSuccessMessage("Video successfully uploaded!");
 
     setTimeout(function () {
-      window.location.href = "/upload";
+      window.location.href = "/";
     }, 1500);
   }
   return (
@@ -32,6 +47,7 @@ const Uploads = () => {
                 className="uploads__video"
                 type="image"
                 src={uploadImage}
+                alt="Upload video"
                 id="uploads__video"
                 name="uploads__video"
               ></input>
